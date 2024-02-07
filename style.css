@@ -1,0 +1,56 @@
+/* Core CSS Code. Should only contain base elements */
+html {
+    width: 100%;
+    height: 100%;
+
+    color: white;
+    font-family: Roboto-Mono;
+    background-color: var(--background-color);
+}
+
+textarea {
+    resize: none;
+    padding: 10px;
+
+    outline: none;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    font-family: Roboto-Mono;
+    border: 0px solid white;
+    background-color: transparent;
+}
+
+/* Variables and Data */
+:root {
+    --background-color: #353535;
+}
+
+/* Classes and Multiple Elements */
+.dashed-border {
+    padding: 20px;
+    border-radius: 10px;
+    border: 4px dashed white;
+}
+
+.flexbox-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.version-label {
+    right: 15px;
+    bottom: -5px;
+    position: fixed;
+}
+
+/* Font Families and Handlers */
+@font-face {
+    font-family: Roboto-Mono;
+    src: url('assets/RobotoMono-VariableFont_wght.ttf');
+}
+
+/* ID's and Specific Elements */
+
+/* Keyframes and Animations */
