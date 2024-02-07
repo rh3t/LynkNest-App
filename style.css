@@ -29,8 +29,8 @@ textarea {
 /* Classes and Multiple Elements */
 .dashed-border {
     padding: 20px;
-    border-radius: 10px;
-    border: 4px dashed white;
+    border-radius: 15px;
+    border: 3px dashed white;
 }
 
 .flexbox-center {
