@@ -26,6 +26,8 @@ textarea {
 
 /* Variables and Data */
 :root {
+    --alt-red: #F03A47;
+    --alt-blue: #276FBF;
     --background-color: #353535;
 }
 
@@ -60,7 +62,12 @@ textarea {
     font-size: 13px;
 
     border-radius: 5px;
-    background-color: blue;
+    transition: all ease-in-out 0.1s;
+}
+
+.link {
+    margin-bottom: -10px;
+    text-align: center;
     transition: all ease-in-out 0.1s;
 }
 
@@ -88,6 +95,14 @@ textarea {
 .alt-button:hover {
     cursor: pointer;
 
-    filter: brightness(90%);
+    filter: brightness(85%);
+    transition: all ease-in-out 0.1s;
+}
+
+.link:hover {
+    cursor: pointer;
+
+    font-weight: bold;
+    color: var(--alt-blue);
     transition: all ease-in-out 0.1s;
 }

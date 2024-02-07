@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class = 'flexbox-center'>
     <head>
-        <title>LynkNest ~ Home</title>
+        <title>LynkNest</title>
         <link rel = 'icon' type = 'image/x-icon' href = '../assets/favicon.svg'>
 
         <meta charset = 'utf-8'>
@@ -19,7 +19,7 @@
 
         <div class = 'flexbox-center' style = 'margin-top: -40px;'>
             <p style = 'width: 450px; text-align: center;'>
-                A bulk link grouping tool.
+                A bulk link group sharing tool.
             </p>
         </div>
         <textarea id = 'urlInput' placeholder = 'Enter A Valid URL (https://example.com)' rows = 1 autocomplete = 'off' style = 'width: 500px;'></textarea>
@@ -27,14 +27,16 @@
         <!-- Buttons -->
         <div class = 'flexbox-center' style = 'padding-top: 20px;'>
 
-            <div id = 'importButton' class = 'flexbox-center alt-button' style = 'width: 200px;'>
+            <div id = 'importButton' class = 'flexbox-center alt-button' style = 'width: 200px; background-color: var(--alt-blue);'>
                 <img src = '../assets/import.svg' width = 20>
                 <p style = 'padding-left: 10px;'>
                     Import From File
                 </p>
             </div>
+
+            <img id = 'addButton' class = 'alt-button' src = '../assets/add.svg' width = 20 style = 'margin-left: 20px; background-color: white; padding: 10px;'>
     
-            <div id = 'exportButton' class = 'flexbox-center alt-button' style = 'width: 200px; background-color: red; margin-left: 20px;'>
+            <div id = 'exportButton' class = 'flexbox-center alt-button' style = 'width: 200px; background-color: var(--alt-red); margin-left: 20px;'>
                 <img src = '../assets/export.svg' width = 20>
                 <p style = 'padding-left: 10px;'>
                     Export To File
@@ -42,6 +44,13 @@
             </div>
 
         </div>
+
+        <p style = 'text-align: center; padding-top: 5px; font-size: 10px; opacity: 50%;'>
+            Click Any Link Below To Open
+        </p>
+
+        <!-- Link Holder -->
+        <div id = 'linkList'></div>
 
         <!-- Scripts -->
         <script src = 'script.js'></script>
