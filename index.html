@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class = 'flexbox-center'>
     <head>
-        <title>L1nker ~ Web Application</title>
+        <title>LynkNest</title>
         <link rel = 'icon' type = 'image/x-icon' href = 'assets/favicon.svg'>
 
         <meta charset = 'utf-8'>
@@ -15,15 +15,17 @@
         <div class = 'flexbox-center dashed-border' style = 'flex-direction: column; width: 500px; text-align: center;'>
             <img src = 'assets/favicon.svg' width = 50 style = 'margin-bottom: -10px;'>
             <p style = 'width: 450px; margin-bottom: 5px;'>
-                <b>L1nker</b> is currently in active development, preventing public access. If you have an access code, enter it below.
+                <b>LynkNest</b> is currently in private beta. You can use LynkNest if you have an access code.
             </p>
-            <textarea placeholder = 'Access Key' rows = '1' style = 'width: 250px;'></textarea>
+            <textarea id = 'keyInput' placeholder = 'Access Key (4 Digit Pin)' rows = '1' maxlength = '4' autocomplete="off" style = 'width: 250px;'></textarea>
+            <p id = 'submitButton' class = 'button' style = 'padding: 10px 50px;'>Submit</p>
         </div>
 
         <!-- Scripts -->
         <script src = 'script.js'></script>
         <script src = 'assets/scripts/version-handler.js'></script>
         <script src = 'https://static.rhet0rical.dev/scripts/credit-icon.js'></script>
+
     </body>
 
 </html>

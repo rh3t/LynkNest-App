@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function(){
 
     // Fetch Version
-    fetch('assets/manifest.json').then(response => response.json()).then(data => {
+    fetch('manifest.json').then(response => response.json()).then(data => {
 
         // Log Version
         console.log(`[DEBUG] App Version: ${data.build_type}-${data.build_version}`);
