@@ -4,21 +4,23 @@ html {
     height: 100%;
 
     color: white;
+    user-select: none;
     font-family: Roboto-Mono;
     background-color: var(--background-color);
 }
 
 textarea {
     resize: none;
-    padding: 10px;
-
     outline: none;
+    padding: 10px;
+    
     color: white;
     font-weight: bold;
     text-align: center;
     border-radius: 5px;
+    border: 2px solid white;
+    
     font-family: Roboto-Mono;
-    border: 0px solid white;
     background-color: transparent;
 }
 
@@ -54,6 +56,14 @@ textarea {
     transition: all ease-in-out 0.1s;
 }
 
+.alt-button {
+    font-size: 13px;
+
+    border-radius: 5px;
+    background-color: blue;
+    transition: all ease-in-out 0.1s;
+}
+
 /* Font Families and Handlers */
 @font-face {
     font-family: Roboto-Mono;
@@ -61,6 +71,10 @@ textarea {
 }
 
 /* ID's and Specific Elements */
+#header {
+    font-size: 30px;
+    font-weight: bold;
+}
 
 /* Keyframes and Animations */
 .button:hover {
@@ -68,5 +82,12 @@ textarea {
 
     color: black;
     background-color: white;
+    transition: all ease-in-out 0.1s;
+}
+
+.alt-button:hover {
+    cursor: pointer;
+
+    filter: brightness(90%);
     transition: all ease-in-out 0.1s;
 }

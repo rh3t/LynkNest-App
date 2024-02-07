@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class = 'flexbox-center'>
     <head>
         <title>LynkNest ~ Home</title>
         <link rel = 'icon' type = 'image/x-icon' href = '../assets/favicon.svg'>
@@ -12,11 +12,41 @@
     <body>
 
         <!-- Content -->
-        Yay! You logged in! <br><br> :)
+        <div id = 'header' class = 'flexbox-center'>
+            <img src = '../assets/favicon.svg' width = 70>
+            <p style = 'padding-left: 10px;'>LynkNest</p>
+        </div>
+
+        <div class = 'flexbox-center' style = 'margin-top: -40px;'>
+            <p style = 'width: 450px; text-align: center;'>
+                A bulk link grouping tool.
+            </p>
+        </div>
+        <textarea id = 'urlInput' placeholder = 'Enter A Valid URL (https://example.com)' rows = 1 autocomplete = 'off' style = 'width: 500px;'></textarea>
+
+        <!-- Buttons -->
+        <div class = 'flexbox-center' style = 'padding-top: 20px;'>
+
+            <div id = 'importButton' class = 'flexbox-center alt-button' style = 'width: 200px;'>
+                <img src = '../assets/import.svg' width = 20>
+                <p style = 'padding-left: 10px;'>
+                    Import From File
+                </p>
+            </div>
+    
+            <div id = 'exportButton' class = 'flexbox-center alt-button' style = 'width: 200px; background-color: red; margin-left: 20px;'>
+                <img src = '../assets/export.svg' width = 20>
+                <p style = 'padding-left: 10px;'>
+                    Export To File
+                </p>
+            </div>
+
+        </div>
 
         <!-- Scripts -->
         <script src = 'script.js'></script>
         <script src = '../assets/scripts/version-handler.js'></script>
+        <script src = 'https://static.rhet0rical.dev/scripts/credit-icon.js'></script>
     </body>
 
 </html>

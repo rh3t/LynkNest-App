@@ -1,3 +1,1 @@
-- Made ``version-handler.js`` portable across pages.
-- Added 404 page.
-- Added home page.
+- Added ``login-check.js`` to verify if the user is logged in or not.
