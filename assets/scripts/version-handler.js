@@ -1,8 +1,17 @@
 // Init
 document.addEventListener('DOMContentLoaded', function(){
 
+    // Fetch Resources Relative To Location
+    var manifestLocation;
+    console.log(`[DEBUG] Location Path: ${window.location.pathname}`);
+    if(window.location.pathname == '/'){
+        manifestLocation = 'manifest.json';
+    } else if (window.location.pathname == '/home/'){
+        manifestLocation = '../manifest.json';
+    }
+
     // Fetch Version
-    fetch('manifest.json').then(response => response.json()).then(data => {
+    fetch(manifestLocation).then(response => response.json()).then(data => {
 
         // Log Version
         console.log(`[DEBUG] App Version: ${data.build_type}-${data.build_version}`);
