@@ -5,6 +5,15 @@ const addButton = document.getElementById('addButton');
 const fileInput = document.getElementById('fileInput');
 const importButton = document.getElementById('importButton');
 const exportButton = document.getElementById('exportButton');
+const exportButtonLabel = document.getElementById('exportButtonLabel');
+
+// Link List
+var bulkLinkList = [];
+
+// Print List Function
+function printList(){
+    console.log(bulkLinkList);
+}
 
 // File Processing
 fileInput.addEventListener('change', (event) => {
@@ -29,8 +38,7 @@ fileInput.addEventListener('change', (event) => {
             
             // Clean Mess
             urlInput.innerHTML = null;
-            console.log(`[DEBUG] Successfully Loaded Content.`)
-            window.alert('Successfully Loaded Data.')
+            console.log(`[DEBUG] Successfully Loaded Content.`);
 
         } catch (error) {
             window.alert(`Unable to parse file as valid JSON. Resubmit the file and try again.`);
@@ -61,6 +69,8 @@ addButton.addEventListener('click', function(){
 
         // Append Element
         linkList.appendChild(element);
+        bulkLinkList.push(element.innerHTML);
+        exportButtonLabel.innerHTML = `Export To File (${bulkLinkList.length})`
 
     } else {
 
@@ -78,5 +88,26 @@ importButton.addEventListener('click', () => {
 
 // Export Button
 exportButton.addEventListener('click', () => {
+    
+    // Attempt Export
+    try {
+
+        // Create a Blob
+        const blob = new Blob([JSON.stringify(bulkLinkList, null, 2)], { type: 'application/json' });
+
+        // Create a download link
+        const downloadLink = document.createElement('a');
+        downloadLink.href = URL.createObjectURL(blob);
+        downloadLink.download = 'export.json';
+        downloadLink.click();
+
+        // Clean up: revoke the URL object
+        URL.revokeObjectURL(downloadLink.href);
+        console.log('[DEBUG] Successfully Exported File!')
+
+    } catch (error) {
+        window.alert('Failed to export file.')
+        console.log(`[ERROR] Failed to export file: ${error}`)
+    }
 
 })

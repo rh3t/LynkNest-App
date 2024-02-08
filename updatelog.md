@@ -1,2 +1,6 @@
-- Added a functional ``import from file`` system. The file you submit will be parsed as a JSON array and it'll load the links inside of the file, and append them to the output area.
-- Added test JSON files.
+- Removed ``window.alert`` for successful file loading.
+- Specified that files are exported as JSON.
+- Added functioning export system.
+- Export button now specifies ``bulkLinkList.length``.
+
+- Major version jump => 0.9.1
