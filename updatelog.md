@@ -1,2 +1,1 @@
-- Updated README for production.
-- Removed test files.
+- Added a feature that lets you delete elements when they're shift clicked. Not only does this remove them from the DOM, it removes them from ``bulkLinkList``.

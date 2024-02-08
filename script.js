@@ -55,7 +55,7 @@ fileInput.addEventListener('change', (event) => {
 addButton.addEventListener('click', function(){
 
     // Check Value of urlInput
-    if(urlInput.value.includes('https://') && urlInput.value.length > 8){
+    if(urlInput.value.includes('https://')){
 
         // Create Element
         var element = document.createElement('p');
@@ -63,14 +63,24 @@ addButton.addEventListener('click', function(){
         element.classList.add('link');
 
         // Open Link On Click
-        element.addEventListener('click', function(){
-            window.open(element.innerHTML);
+        element.addEventListener('click', function(event){
+            if(event.shiftKey){
+                element.remove();
+                // Remove the element from bulkLinkList
+                var index = bulkLinkList.indexOf(element.innerHTML);
+                if (index !== -1) {
+                    bulkLinkList.splice(index, 1);
+                    exportButtonLabel.innerHTML = `Export To File (${bulkLinkList.length})`;
+                }
+            } else {
+                window.open(element.innerHTML);
+            }
         })
 
         // Append Element
         linkList.appendChild(element);
         bulkLinkList.push(element.innerHTML);
-        exportButtonLabel.innerHTML = `Export To File (${bulkLinkList.length})`
+        exportButtonLabel.innerHTML = `Export To File (${bulkLinkList.length}`;
 
     } else {
 
