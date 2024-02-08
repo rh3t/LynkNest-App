@@ -24,6 +24,7 @@ textarea {
     background-color: transparent;
 }
 
+
 /* Variables and Data */
 :root {
     --alt-red: #F03A47;
@@ -81,6 +82,11 @@ textarea {
 #header {
     font-size: 30px;
     font-weight: bold;
+}
+
+#fileInput {
+    position: fixed;
+    visibility: hidden;
 }
 
 /* Keyframes and Animations */

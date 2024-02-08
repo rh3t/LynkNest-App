@@ -1,1 +1,2 @@
-- Added ``login-check.js`` to verify if the user is logged in or not.
+- Added a functional ``import from file`` system. The file you submit will be parsed as a JSON array and it'll load the links inside of the file, and append them to the output area.
+- Added test JSON files.
