@@ -1,2 +1,2 @@
-- Trimmed uncessesary files. 
-- Prepped for production.
+- Updated README for production.
+- Removed test files.
