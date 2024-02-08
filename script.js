@@ -80,7 +80,7 @@ addButton.addEventListener('click', function(){
         // Append Element
         linkList.appendChild(element);
         bulkLinkList.push(element.innerHTML);
-        exportButtonLabel.innerHTML = `Export To File (${bulkLinkList.length}`;
+        exportButtonLabel.innerHTML = `Export To File (${bulkLinkList.length})`;
 
     } else {
 
