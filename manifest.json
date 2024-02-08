@@ -1,4 +1,4 @@
 {
-    "build_type": "dev",
-    "build_version": "0.9.1"
+    "build_type": "prod",
+    "build_version": "1.0.0"
 }
