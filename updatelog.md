@@ -1,1 +1,1 @@
-- Fixed missing parenthesis on ``exportButton``.
+- Updated lynknest description client-side.
