@@ -85,7 +85,7 @@ addButton.addEventListener('click', function(){
     } else {
 
         // Tag User
-        window.alert('Invalid URL');
+        window.alert(`\"${urlInput.value}\" is not a valid URL. Check your spelling and try again.`);
 
     }
 

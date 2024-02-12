@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
         // Edit Element
         versionElement.classList.add('version-label');
-        versionElement.innerHTML = `${data.build_type}-${data.build_version}`;
+        versionElement.innerHTML = `<a href = 'https://github.com/rhet0r1cal/LynkNest-App'>Visit on GitHub</a> - ${data.build_type}-${data.build_version}`;
 
         // Append Element to DOM
         document.body.appendChild(versionElement);

@@ -1,1 +1,4 @@
-- Updated lynknest description client-side.
+- Added GitHub hyperlink next to version label.
+- Changed instructions.
+- Increased border width of ``textarea``
+- Changed URL Error.
